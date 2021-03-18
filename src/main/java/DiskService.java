@@ -57,7 +57,7 @@ public class DiskService {
                 }
             }
             if (path != null) {
-                File local = new File("downloads//" + name);
+                File local = new File("src//downloads//" + name);
                 client.downloadFile(path.getPath(), local, new ProgressListener() {
                     @Override
                     public void updateProgress(long loaded, long total) {
