@@ -42,7 +42,7 @@ public class DiskServiceTest {
 
     @Test
     public void uploadFile() {
-        assertTrue(diskService.uploadFile("src/downloads/кот.jpg", "/", "src//test//resources//"));
+        assertTrue(diskService.uploadFile("кот.jpg", "/", "src//test//resources//"));
         assertTrue(diskService.getFilesInfo("image").contains("кот.jpg image"));
     }
 
@@ -53,7 +53,7 @@ public class DiskServiceTest {
 
     @Test
     public void deleteFile(){
-        diskService.uploadFile("src/downloads/кот.jpg", "/", "src//test//resources//");
-        assertTrue(diskService.deleteFile("src/downloads/кот.jpg"));
+        diskService.uploadFile("кот.jpg", "/", "src//test//resources//");
+        assertTrue(diskService.deleteFile("кот.jpg"));
     }
 }

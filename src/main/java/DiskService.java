@@ -80,7 +80,7 @@ public class DiskService {
 
     boolean uploadFile(String name, String serverPath, String localPath) {
         File local = new File(localPath + name);
-        Link link = null;
+        Link link;
         try {
             link = client.getUploadLink(serverPath + name, true);
         } catch (Exception e) {
