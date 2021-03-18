@@ -1,10 +1,7 @@
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -45,7 +42,7 @@ public class DiskServiceTest {
 
     @Test
     public void uploadFile() {
-        assertTrue(diskService.uploadFile("кот.jpg", "/", "src//test//resources//"));
+        assertTrue(diskService.uploadFile("src/downloads/кот.jpg", "/", "src//test//resources//"));
         assertTrue(diskService.getFilesInfo("image").contains("кот.jpg image"));
     }
 
@@ -56,7 +53,7 @@ public class DiskServiceTest {
 
     @Test
     public void deleteFile(){
-        diskService.uploadFile("кот.jpg", "/", "src//test//resources//");
-        assertTrue(diskService.deleteFile("кот.jpg"));
+        diskService.uploadFile("src/downloads/кот.jpg", "/", "src//test//resources//");
+        assertTrue(diskService.deleteFile("src/downloads/кот.jpg"));
     }
 }
